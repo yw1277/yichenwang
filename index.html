@@ -234,7 +234,7 @@
       <div class="paper-title">Trade Diversion and Government-Led Credit Provision: Evidence from China's VAT Rebate Loan Program</div>
       <div class="jmp-tag">Job Market Paper</div>
       <div class="paper-links">
-        <a class="abstract-toggle" onclick="toggleAbstract(this)">[Hide Abstract]</a>
+        <a class="abstract-toggle">[Hide Abstract]</a>
       </div>
       <div class="abstract-text">We show that financial constraints distort how multi-product firms adjust exports in response to trade tensions. Exploiting a staggered Chinese loan program that allows exporters to pledge unfulfilled VAT rebate receivables as collateral for short-term bank loans, we compare treated firms in adopting cities to matched firms in never-treated cities, both facing the same anti-dumping tariff investigations. Credit access reduces cross-product, cross-market trade deflection by 62% in value and 48% in volume. The effect concentrates among firms whose working capital is most severely trapped in government receivables. These firms increase short-term borrowing after program adoption but do not export differentially more in aggregate. Our results demonstrate that a meaningful share of trade deflection is not efficient reallocation but financially forced diversion, and that targeted credit provision can substitute for distressed firm adjustment.</div>
       <div class="presentations"><strong>Presentations:</strong> 2nd HKU Next-Gen Finance PhD Workshop (&#127758; Travel Grant), ABFER 13th Annual Conference Poster Session (scheduled)</div>
@@ -244,7 +244,7 @@
       <div class="paper-title">Political Ideology and Durable Spending</div>
       <div class="authors">with <a href="https://sites.google.com/site/yongqiangchu/" target="_blank">Yongqiang Chu</a>, <a href="http://www.francescodacunto.com/" target="_blank">Francesco D'Acunto</a>, <a href="https://www.janetgaofinance.com/" target="_blank">Janet Gao</a>, and <a href="https://www.congromanwang.com/" target="_blank">Roman Wang</a></div>
       <div class="paper-links">
-        <a class="abstract-toggle" onclick="toggleAbstract(this)">[Hide Abstract]</a>
+        <a class="abstract-toggle">[Hide Abstract]</a>
         <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6428183" target="_blank">[SSRN]</a>
       </div>
       <div class="abstract-text">We study political ideology as a driver of heterogeneous durable spending. Research in psychology suggests that conservatives' personality traits lead them to focus on the investment properties of durables, whereas liberals focus on consumption value. Combining U.S. voter registration records with housing transactions, which capture both consumption and investment motives, we show that conservatives transact more frequently, especially in secondary properties, which do not necessarily provide any consumption value. Conditional on transacting, conservatives more often trade down and realize capital gains, while liberals trade up and increase housing consumption. Conservatives' transactions, but not liberals', respond more strongly to financial incentives: interest rates, the opportunity cost of housing investments relative to equities, and house-price appreciation. Within households, ideology does not combine linearly: mixed-ideology couples transact less than ideologically homogeneous ones of either color, and their choices align more closely with the man's ideology.</div>
@@ -254,7 +254,7 @@
       <div class="paper-title">Bank Ownership as a Political Instrument: Evidence from Chinese Local Governments</div>
       <div class="authors">with <a href="https://sites.google.com/view/naideye/home/" target="_blank">Naide Ye</a></div>
       <div class="paper-links">
-        <a class="abstract-toggle" onclick="toggleAbstract(this)">[Hide Abstract]</a>
+        <a class="abstract-toggle">[Hide Abstract]</a>
       </div>
       <div class="abstract-text">We examine how local governments use ownership of banks as a political and fiscal instrument to expand access to off-budget credit. We exploit a 2018 regulatory shock in China that unintentionally increased local government ownership of local banks. Combining loan-level data with a penetration-based measure of government ownership, we find that banks experiencing a one-standard deviation increase in local government ownership, instrumented by regulation-driven variation, expanded credit lines to local government financing vehicles by 69 percent. The effect is stronger in cities where local officials have stronger promotion incentives or face greater pressures to maintain social stability. Greater government ownership also shifts lending practices away from profitability-based criteria and enables high-risk cities to substitute costly bond issuance with bank borrowing. Taken together, our findings highlight bank ownership as a key political lever through which local governments circumvent formal fiscal constraints and shape the build-up of implicit public debt.</div>
       <div class="presentations"><strong>Presentations:</strong> 8th CCER Summer Institute 2024, Dishui Lake International Conference in Finance 2025, 8th International Conference of China and Development Studies 2025</div>
@@ -269,7 +269,7 @@
       <div class="authors">with <a href="https://research-repository.uwa.edu.au/en/persons/sam-tang/" target="_blank">Sam Hak Kan Tang</a> and <a href="https://www.cb.cityu.edu.hk/staff/efywang/" target="_blank">Yong Wang</a></div>
       <div class="venue"><a href="https://www.sciencedirect.com/science/article/pii/S0305750X25000142" target="_blank"><em>World Development</em></a>, 189, May 2025, 106931</div>
       <div class="paper-links">
-        <a class="abstract-toggle" onclick="toggleAbstract(this)">[Hide Abstract]</a>
+        <a class="abstract-toggle">[Hide Abstract]</a>
         <a href="https://www.sciencedirect.com/science/article/pii/S0305750X25000142" target="_blank">[Full Paper]</a>
       </div>
       <div class="abstract-text">Low-skilled emigration is generally construed as benign and even beneficial for the migrant-sending countries. However, it can also lead to a disincentive effect on human capital formation in the source countries. Using a panel bilateral migration dataset that captures the surge of low-skill migrants in OECD countries in the 2000s, we study how low-skilled emigration affects human capital formation in the migrant-sending countries. We find that the expected returns to low-skilled emigration reduce long-run human capital formation as measured by the average years of schooling and the human capital index of the migrant-sending countries in the subsequent decade. This negative effect on overall human capital formation is manifested through a substantial reduction in tertiary educational attainment, which is both statistically significant and robust to various sensitivity tests and alternative model specifications. Additionally, there is some evidence of a positive association between the expected returns to low-skilled emigration and secondary educational attainment in the subsequent decade. An important qualification is that only middle- and high-income countries are strongly affected by low-skilled emigration, while low-income countries show little to no disincentive effect.</div>
@@ -320,6 +320,23 @@
   &copy; 2026 Yichen Wang
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-function toggleAbstract(el) {
-  var abs = el.closest('.paper-links') ? el.closest
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.abstract-toggle').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+      var paper = el.closest('.paper');
+      var abs = paper.querySelector('.abstract-text');
+      if (abs.style.display === 'none') {
+        abs.style.display = 'block';
+        el.textContent = '[Hide Abstract]';
+      } else {
+        abs.style.display = 'none';
+        el.textContent = '[Abstract]';
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
