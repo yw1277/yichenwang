@@ -1,5 +1,8 @@
 ## Hi there 👋
 
+name cheap: i bought domain (yichenwangfinance) for two years.
+https://ap.www.namecheap.com/Domains/DomainControlPanel/yichenwangfinance.com/advancedns
+
 <!--
 **yw1277/yw1277** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
