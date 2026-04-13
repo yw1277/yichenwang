@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-name cheap: i bought domain (yichenwangfinance) for two years.
+name cheap: i bought domain (yichenwangfinance) for two years starting from April 13 2026.
 https://ap.www.namecheap.com/Domains/DomainControlPanel/yichenwangfinance.com/advancedns
 
 <!--
