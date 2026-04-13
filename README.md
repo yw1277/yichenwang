@@ -3,6 +3,11 @@
 name cheap: i bought domain (yichenwangfinance) for two years starting from April 13 2026.
 https://ap.www.namecheap.com/Domains/DomainControlPanel/yichenwangfinance.com/advancedns
 
+To-do by April 17
+https://search.google.com/search-console/inspect?resource_id=https%3A%2F%2Fyichenwangfinance.com%2F&id=nDOy0y1HkIdbpfefoQ2w1g
+- Google typically takes 3–7 days to index a new site, sometimes up to 2 weeks. You don't need to do anything else — just wait. You can check back in Google Search Console in a few days to see if the status has changed to "URL is on Google."
+- In the meantime, add those SEO meta tags to your index.html if you haven't yet — they'll help your site rank better once Google does index it. Would you like help with anything else on the site?
+
 <!--
 **yw1277/yw1277** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
