@@ -14,7 +14,7 @@
     font-family: Georgia, 'Times New Roman', serif;
     color: #333;
     background: #fff;
-    line-height: 1.7;
+    line-height: 1.55;
     font-size: 15.5px;
   }
   a { color: #1a5276; text-decoration: none; }
@@ -60,7 +60,7 @@
   .header-section {
     display: flex;
     gap: 36px;
-    padding: 48px 0 40px;
+    padding: 28px 0 22px;
     align-items: flex-start;
   }
   .header-info h1 {
@@ -85,14 +85,14 @@
   }
 
   section {
-    padding: 32px 0;
+    padding: 20px 0;
     border-top: 1px solid #eee;
   }
   section h2 {
     font-size: 20px;
     font-weight: normal;
     color: #1a1a1a;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     letter-spacing: 0.3px;
   }
   .interests {
@@ -102,7 +102,7 @@
   }
 
   .paper {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
   .paper .paper-title {
     font-weight: bold;
@@ -152,7 +152,7 @@
     padding: 12px 16px;
     background: #fafafa;
     border-left: 3px solid #ddd;
-    line-height: 1.65;
+    line-height: 1.55;
   }
   .jmp-tag {
     font-style: normal;
@@ -160,20 +160,36 @@
     font-size: 13.5px;
   }
 
+  .teaching-intro {
+    font-size: 14.5px;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  .award-badge {
+    display: inline-block;
+    font-size: 14px;
+    color: #8a6d1f;
+    background: #fbf6e9;
+    border: 1px solid #e7d49b;
+    border-radius: 4px;
+    padding: 4px 10px;
+    margin-bottom: 14px;
+  }
   .teaching-item {
-    margin-bottom: 3px;
+    margin-bottom: 4px;
     font-size: 15px;
-    line-height: 1.4;
+    line-height: 1.45;
   }
   .teaching-item .course { color: #1a1a1a; }
-  .teaching-item .details { color: #777; font-size: 14px; }
+  .teaching-item .details { color: #333; font-size: 14px; }
+  .teaching-item .details .level { color: #1a5276; }
 
   .cv-link { font-size: 15.5px; }
 
   footer {
     border-top: 1px solid #eee;
-    padding: 24px 0;
-    margin-top: 20px;
+    padding: 16px 0;
+    margin-top: 8px;
     text-align: center;
     font-size: 13px;
     color: #aaa;
@@ -197,7 +213,7 @@
   <div class="nav-inner">
     <span class="name">Yichen Wang</span>
     <div class="links">
-      <a href="Yichen_Wang_cv.pdf" target="_blank">C.V.</a>
+      <a href="Yichen_Wang_cv.pdf?v=20260624" target="_blank">C.V.</a>
     </div>
   </div>
 </nav>
@@ -209,9 +225,8 @@
     <img src="yichen_portrait.png" alt="Yichen Wang" style="width: 180px; height: 220px; object-fit: cover; border: 1px solid #ddd;">
     <div class="header-info">
       <h1>Yichen Wang</h1>
-      <div class="title">Ph.D. Candidate in Finance</div>
-      <div class="title">Shanghai Advanced Institute of Finance, Shanghai Jiao Tong University</div>
-      <div class="title">Visiting Research Scholar, McDonough School of Business, Georgetown University</div>
+      <div class="title">Research Scholar, McDonough School of Business, Georgetown University</div>
+      <div class="title">Ph.D. Candidate in Finance, Shanghai Advanced Institute of Finance, Shanghai Jiao Tong University</div>
       <div class="contact">
         <span>&#9993; <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#105;&#99;&#104;&#101;&#110;&#46;&#119;&#97;&#110;&#103;&#64;&#103;&#101;&#111;&#114;&#103;&#101;&#116;&#111;&#119;&#110;&#46;&#101;&#100;&#117;">&#121;&#105;&#99;&#104;&#101;&#110;&#46;&#119;&#97;&#110;&#103;&#64;&#103;&#101;&#111;&#114;&#103;&#101;&#116;&#111;&#119;&#110;&#46;&#101;&#100;&#117;</a></span> 
         <span>&#9993; <a href="mailto:ycwang3.21@saif.sjtu.edu.cn">ycwang3.21@saif.sjtu.edu.cn</a></span>
@@ -222,12 +237,8 @@
 
   <section>
     <h2>About</h2>
-    <p style="font-size: 15px; color: #444; line-height: 1.75;">I am a Ph.D. candidate in Finance at the Shanghai Advanced Institute of Finance, Shanghai Jiao Tong University, and a Visiting Research Scholar at Georgetown University.<br><br>My research examines how political forces shape financial outcomes, focusing on government credit provision, bank ownership, and household investment decisions.</p>
-  </section>
-
-  <section>
-    <h2>Research Interests</h2>
-    <p class="interests">Political Economy of Finance &nbsp;&middot;&nbsp; Corporate Finance &nbsp;&middot;&nbsp; Household Finance</p>
+    <p style="font-size: 15px; color: #444; line-height: 1.6;">My research examines how political forces shape financial outcomes, focusing on government credit provision, bank ownership, and household investment decisions.</p>
+    <p class="interests" style="margin-top: 10px;"><strong>Research interests:</strong> Political Finance &nbsp;&middot;&nbsp; Corporate Finance &nbsp;&middot;&nbsp; Household Finance &nbsp;&middot;&nbsp; Real Estate</p>
   </section>
 
   <!-- WORKING PAPERS -->
@@ -236,12 +247,13 @@
 
     <div class="paper">
       <div class="paper-title">Trade Diversion and Government-Led Credit Provision: Evidence from China's VAT Rebate Loan Program</div>
-      <div class="jmp-tag">Job Market Paper</div>
       <div class="paper-links">
         <a class="abstract-toggle">[Hide Abstract]</a>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6758840" target="_blank">[SSRN]</a>
+        <a href="poster_yichen_wang_compress.pdf" target="_blank">[Poster]</a>
       </div>
-      <div class="abstract-text">I study how a loan program shapes firm product investment response to adverse trade shocks. Using a unique panel of Chinese firms with detailed export and financial information, I show that anti-dumping investigations reduce affected firms' sales to the initiating destination and raise sales to other destinations. Firms in cities that adopt the VAT rebate loan program are more likely to maintain sales of the targeted product to the initiating destination but divert less to unaffected destinations. The evidence is consistent with firms raising prices in affected destinations after the shock and firms in adopting cities increasing short-term borrowing. These findings speak to the role of domestic credit policy in moderating the impacts of foreign trade barriers.</div>
-      <div class="presentations"><strong>&#127758; Travel Grant:</strong> 2nd HKU Next-Gen Finance PhD Workshop<br><strong>Presentations:</strong> ABFER 13th Annual Conference Poster Session (scheduled 2026), 6th Greater China Area Finance Conference (scheduled 2026)</div>
+      <div class="abstract-text">We document how access to a government credit program shapes Chinese exporters' adjustment to AD investigations by combining firm-product-destination customs data with hand-collected adoption dates of a VAT rebate loan program in 325 prefecture-level cities. AD investigations chill exports of the targeted product to the initiating destination and induce cross-destination diversion. The loan program, which allows exporters to pledge unfulfilled VAT rebate receivables as collateral for short-term bank loans, enables AD-hit firms to continue serving the targeted market and reduces their diversion to non-hit destinations. We explain these patterns through higher prices in initiating destinations and increased short-term borrowing among firms with higher rebate-delay ratios. Our results suggest that financial access shapes firms' product-destination investment decisions, and domestic credit policy can moderate the impact of foreign trade barriers.</div>
+      <div class="presentations"><strong>&#127942; Award:</strong> Best Poster Award Finalist, 13th ABFER Annual Conference<br><strong>&#127758; Travel Grant:</strong> 2nd HKU Next-Gen Finance PhD Workshop<br><strong>Presentations:</strong> 13th ABFER Annual Conference, Georgetown University (EGSO Seminar), FMA European Conference Doctoral Student Consortium (canceled), CCER Summer Institute (scheduled), 6th Greater China Area Finance Conference (scheduled), Southern Finance Association Annual Meeting (scheduled)</div>
     </div>
 
     <div class="paper">
@@ -252,6 +264,7 @@
         <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6428183" target="_blank">[SSRN]</a>
       </div>
       <div class="abstract-text">We study political ideology as a driver of heterogeneous durable spending. Research in psychology suggests that conservatives' personality traits lead them to focus on the investment properties of durables, whereas liberals focus on consumption value. Combining U.S. voter registration records with housing transactions, which capture both consumption and investment motives, we show that conservatives transact more frequently, especially in secondary properties, which do not necessarily provide any consumption value. Conditional on transacting, conservatives more often trade down and realize capital gains, while liberals trade up and increase housing consumption. Conservatives' transactions, but not liberals', respond more strongly to financial incentives: interest rates, the opportunity cost of housing investments relative to equities, and house-price appreciation. Within households, ideology does not combine linearly: mixed-ideology couples transact less than ideologically homogeneous ones of either color, and their choices align more closely with the man's ideology.</div>
+      <div class="presentations"><strong>Working Paper Series:</strong> HKU Jockey Club Enterprise Sustainability Global Research Institute Paper No. 2026/057</div>
     </div>
 
     <div class="paper">
@@ -259,9 +272,10 @@
       <div class="authors">with <a href="https://sites.google.com/view/naideye/home/" target="_blank">Naide Ye</a></div>
       <div class="paper-links">
         <a class="abstract-toggle">[Hide Abstract]</a>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6980639" target="_blank">[SSRN]</a>
       </div>
-      <div class="abstract-text">We examine how local governments use ownership of banks as a political and fiscal instrument to expand access to off-budget credit. We exploit a 2018 regulatory shock in China that unintentionally increased local government ownership of local banks. Combining loan-level data with a penetration-based measure of government ownership, we find that banks experiencing a one-standard deviation increase in local government ownership, instrumented by regulation-driven variation, expanded credit lines to local government financing vehicles by 69 percent. The effect is stronger in cities where local officials have stronger promotion incentives or face greater pressures to maintain social stability. Greater government ownership also shifts lending practices away from profitability-based criteria and enables high-risk cities to substitute costly bond issuance with bank borrowing. Taken together, our findings highlight bank ownership as a key political lever through which local governments circumvent formal fiscal constraints and shape the build-up of implicit public debt.</div>
-      <div class="presentations"><strong>Presentations:</strong> 8th CCER Summer Institute 2024, Dishui Lake International Conference in Finance 2025, 8th International Conference of China and Development Studies 2025, the Eighth China International Conference in Macroeconomics (scheduled 2026), China Financial Research Conference (scheduled 2026) </div>
+      <div class="abstract-text">We study how local governments use equity stakes in banks as a political and fiscal instrument to expand off-budget credit. We develop a novel city-bank-year measure of Chinese local government ownership from banks&rsquo; shareholder registries and link it to transaction-level borrowing by local government financing vehicles (LGFVs). We find that a one-standard-deviation increase in a local government&rsquo;s ownership stake in a bank raises that bank&rsquo;s credit to local government borrowers by 11%. We exploit a regulatory reform that forced private shareholders to unwind bank holdings to support a causal interpretation. This effect is stronger when political competition is intense, officials near the end of their terms, and fiscal constraints are tighter. Greater local-government ownership also makes LGFV investment more responsive to industry performance, yet these projects are more likely to fail, indicating that ownership directs credit to attractive industries at the cost of project quality.</div>
+      <div class="presentations"><strong>Presentations:</strong> 8th CCER Summer Institute 2024, Dishui Lake International Conference in Finance 2025, 8th International Conference of China and Development Studies 2025, the Eighth China International Conference in Macroeconomics (scheduled), China Financial Research Conference (scheduled)</div>
     </div>
   </section>
 
@@ -269,9 +283,9 @@
   <section>
     <h2>Publications</h2>
     <div class="paper">
-      <div class="paper-title">Curse of Lower-skilled Emigration on Human Capital Formation: Evidence from the Migration Surge of the 1990s and 2000s</div>
+      <div class="paper-title">Curse of low-skilled emigration on human capital formation: Evidence from the migration surge of the 2000s</div>
       <div class="authors">with <a href="https://research-repository.uwa.edu.au/en/persons/sam-tang/" target="_blank">Sam Hak Kan Tang</a> and <a href="https://www.cb.cityu.edu.hk/staff/efywang/" target="_blank">Yong Wang</a></div>
-      <div class="venue"><a href="https://www.sciencedirect.com/science/article/pii/S0305750X25000142" target="_blank"><em>World Development</em></a>, 189, May 2025, 106931</div>
+      <div class="venue"><a href="https://www.sciencedirect.com/journal/world-development" target="_blank"><strong><em>World Development</em></strong></a>, 189, May 2025, 106931 (<strong>ABDC A*</strong>; a leading development economics journal)</div>
       <div class="paper-links">
         <a class="abstract-toggle">[Hide Abstract]</a>
         <a href="https://www.sciencedirect.com/science/article/pii/S0305750X25000142" target="_blank">[Full Paper]</a>
@@ -283,39 +297,23 @@
   <!-- TEACHING -->
   <section id="teaching">
     <h2>Teaching</h2>
-    <p style="font-size: 14px; color: #777; margin-bottom: 6px;">Teaching Assistant, Shanghai Jiao Tong University &nbsp;|&nbsp; All courses taught in English</p>
-    <p style="font-size: 15px; color: #1a1a1a; margin-bottom: 14px; padding: 8px 12px; background: #f7f3e9; border-left: 3px solid #d4a843; display: inline-block;">&#127942; <strong>Teaching Assistant Excellence Award, 2024</strong></p>
+    <p class="teaching-intro">Teaching Assistant, Shanghai Jiao Tong University &nbsp;&middot;&nbsp; all courses taught in English</p>
+    <div class="award-badge">&#127942; Teaching Assistant Excellence Award, 2024</div>
 
-    <div class="teaching-item">
-      <span class="course">Principles of Finance</span> <span class="details">&mdash; MBA &amp; Master of Finance &nbsp;|&nbsp; Fall 2023, Fall 2024</span>
-    </div>
-    <div class="teaching-item">
-      <span class="course">Corporate Finance</span> <span class="details">&mdash; MBA &nbsp;|&nbsp; Spring 2025</span>
-    </div>
-    <div class="teaching-item">
-      <span class="course">Financial Literacy</span> <span class="details">&mdash; Undergraduate &nbsp;|&nbsp; Spring 2024</span>
-    </div>
-    <div class="teaching-item">
-      <span class="course">Real Estate Finance</span> <span class="details">&mdash; MBA &nbsp;|&nbsp; Summer 2023</span>
-    </div>
-    <div class="teaching-item">
-      <span class="course">Advanced Business Analytics</span> <span class="details">&mdash; MBA &nbsp;|&nbsp; Spring 2022, Fall 2022</span>
-    </div>
-    <div class="teaching-item">
-      <span class="course">Product Pricing Strategy</span> <span class="details">&mdash; MBA &nbsp;|&nbsp; Spring 2022</span>
-    </div>
-    <div class="teaching-item">
-      <span class="course">Marketing Management</span> <span class="details">&mdash; MBA &nbsp;|&nbsp; Fall 2022</span>
-    </div>
-    <div class="teaching-item">
-      <span class="course">Asset Management in Practice</span> <span class="details">&mdash; MBA &nbsp;|&nbsp; Fall 2021</span>
-    </div>
+    <div class="teaching-item"><span class="course">Principles of Finance</span> <span class="details">&mdash; <span class="level">MBA &amp; Master of Finance</span> &nbsp;&middot;&nbsp; Fall 2023, Fall 2024</span></div>
+    <div class="teaching-item"><span class="course">Corporate Finance</span> <span class="details">&mdash; <span class="level">MBA</span> &nbsp;&middot;&nbsp; Spring 2025</span></div>
+    <div class="teaching-item"><span class="course">Financial Literacy</span> <span class="details">&mdash; <span class="level">Undergraduate</span> &nbsp;&middot;&nbsp; Spring 2024</span></div>
+    <div class="teaching-item"><span class="course">Real Estate Finance</span> <span class="details">&mdash; <span class="level">MBA</span> &nbsp;&middot;&nbsp; Summer 2023</span></div>
+    <div class="teaching-item"><span class="course">Advanced Business Analytics</span> <span class="details">&mdash; <span class="level">MBA</span> &nbsp;&middot;&nbsp; Spring 2022, Fall 2022</span></div>
+    <div class="teaching-item"><span class="course">Product Pricing Strategy</span> <span class="details">&mdash; <span class="level">MBA</span> &nbsp;&middot;&nbsp; Spring 2022</span></div>
+    <div class="teaching-item"><span class="course">Marketing Management</span> <span class="details">&mdash; <span class="level">MBA</span> &nbsp;&middot;&nbsp; Fall 2022</span></div>
+    <div class="teaching-item"><span class="course">Asset Management in Practice</span> <span class="details">&mdash; <span class="level">MBA</span> &nbsp;&middot;&nbsp; Fall 2021</span></div>
   </section>
 
   <!-- CV -->
   <section id="cv">
     <h2>C.V.</h2>
-    <p class="cv-link"><a href="Yichen_Wang_cv.pdf" target="_blank">Download C.V. (PDF)</a></p>
+    <p class="cv-link"><a href="Yichen_Wang_cv.pdf?v=20260624" target="_blank">Download C.V. (PDF)</a></p>
   </section>
 
 </div>
