@@ -10,353 +10,510 @@
 <title>Yichen Wang</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
   body {
-    font-family: Georgia, 'Times New Roman', serif;
-    color: #1a1a1a;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #333;
     background: #fff;
-    line-height: 1.55;
-    font-size: 15.5px;
   }
-  a { color: #1a5276; text-decoration: none; }
+
+  a { color: #1a3a5c; text-decoration: none; }
   a:hover { text-decoration: underline; }
 
-  nav {
-    border-bottom: 1px solid #ddd;
-    padding: 14px 0;
+  /* ── Navigation ── */
+  header {
+    background-color: #1a3a5c;
     position: sticky;
     top: 0;
-    background: #fff;
     z-index: 100;
   }
-  nav .nav-inner {
-    max-width: 820px;
+  nav {
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0 24px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    padding: 0 24px;
   }
-  nav .name {
-    font-size: 18px;
+  nav .site-name {
+    color: #fff;
+    font-size: 1.05em;
     font-weight: bold;
-    color: #1a1a1a;
-    letter-spacing: 0.3px;
-  }
-  nav .links a {
-    margin-left: 28px;
-    font-size: 14px;
-    color: #1a1a1a;
-    text-transform: uppercase;
+    padding: 15px 0;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.5px;
   }
-  nav .links a:hover { color: #1a5276; }
-
-  .container {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 0 24px;
+  nav .site-name:hover { text-decoration: none; }
+  nav ul { list-style: none; display: flex; flex-wrap: wrap; }
+  nav ul li a {
+    display: block;
+    color: #cdd8e3;
+    padding: 15px 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.85em;
+    letter-spacing: 0.3px;
+    transition: color 0.15s;
+  }
+  nav ul li a:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
   }
 
+  /* ── Page container ── */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px 20px;
+  }
+
+  /* ── Section headings ── */
+  h2.section-heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.05em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1a3a5c;
+    border-bottom: 2px solid #1a3a5c;
+    padding-bottom: 6px;
+    margin: 50px 0 20px;
+  }
+  section { scroll-margin-top: 20px; }
+  section:first-of-type h2.section-heading { margin-top: 26px; }
+
+  /* ── Header / about ── */
   .header-section {
     display: flex;
     gap: 36px;
-    padding: 28px 0 22px;
     align-items: flex-start;
-  }
-  .header-info h1 {
-    font-size: 28px;
-    font-weight: normal;
-    color: #1a1a1a;
     margin-bottom: 6px;
   }
+  .header-section img {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    flex-shrink: 0;
+  }
+  .header-info h1 {
+    font-size: 2em;
+    color: #1a3a5c;
+    font-weight: normal;
+    margin-bottom: 8px;
+  }
   .header-info .title {
-    font-size: 15px;
-    color: #1a1a1a;
-    margin-bottom: 4px;
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 3px;
   }
   .header-info .contact {
     margin-top: 14px;
-    font-size: 14px;
-    color: #1a1a1a;
+    font-size: 0.95em;
     line-height: 1.9;
   }
-  .header-info .contact span {
-    display: block;
-  }
+  .header-info .contact span { display: block; }
 
-  section {
-    padding: 20px 0;
-    border-top: 1px solid #eee;
-    scroll-margin-top: 64px;
-  }
-  section h2 {
-    font-size: 20px;
-    font-weight: normal;
-    color: #1a1a1a;
-    margin-bottom: 12px;
-    letter-spacing: 0.3px;
-  }
-  .interests {
-    font-size: 15px;
-    color: #1a1a1a;
-    margin-bottom: 0;
-  }
-
-  .paper {
-    margin-bottom: 24px;
-  }
-  .paper .paper-title {
-    font-weight: bold;
-    color: #1a1a1a;
-    font-size: 15.5px;
-  }
-  .paper .authors {
-    font-size: 14.5px;
-    color: #1a1a1a;
-    margin-top: 3px;
-  }
-  .paper .authors a { color: #1a1a1a; font-style: italic; }
-  .paper .authors a:hover { color: #1a5276; }
-  .paper .venue {
-    font-size: 14px;
-    color: #1a1a1a;
-    font-style: italic;
-    margin-top: 2px;
-  }
-  .paper .venue a { color: #1a1a1a; }
-  .paper .venue a:hover { color: #1a5276; }
-  .paper .presentations {
-    font-size: 13.5px;
-    color: #1a1a1a;
-    margin-top: 5px;
-    padding-left: 16px;
-    line-height: 1.7;
-  }
-  .paper .paper-links {
-    margin-top: 6px;
-  }
-  .paper .paper-links a {
-    margin-right: 14px;
-    font-size: 15.5px;
-    font-weight: bold;
-  }
-  .paper .abstract-toggle {
-    color: #1a7f64;
-    cursor: pointer;
-  }
-  .paper .paper-links a.lnk-ssrn { color: #2563a8; }
-  .paper .paper-links a.lnk-poster { color: #9c4f96; }
-  .paper .paper-links a.lnk-paper { color: #b5651d; }
-  .paper .abstract-toggle:hover { text-decoration: underline; }
-  .paper .abstract-text {
-    display: none;
-    font-size: 14px;
-    color: #555;
-    margin-top: 8px;
-    padding: 12px 16px;
-    background: #fafafa;
-    border-left: 3px solid #ddd;
-    line-height: 1.55;
-  }
-  .jmp-tag {
-    font-style: normal;
-    color: #c0392b;
-    font-size: 13.5px;
-  }
-
-  .teaching-intro {
-    font-size: 14.5px;
-    color: #1a1a1a;
+  .about-text {
+    font-size: 0.98em;
+    color: #333;
     margin-bottom: 10px;
   }
-  .award-badge {
+  .interests { font-size: 0.98em; color: #333; }
+
+  /* ── Papers and teaching share one block grammar ── */
+  .paper,
+  .teaching-group {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  .paper:last-child,
+  .teaching-group:last-child { border-bottom: none; padding-bottom: 4px; }
+
+  .paper-header { margin-bottom: 6px; }
+  .paper-num {
+    color: #666;
+    font-size: 0.9em;
+    margin-right: 3px;
+  }
+  .paper-title {
+    font-weight: bold;
+    color: #1a3a5c;
+  }
+  /* status badge sits inline with the title, matching its font and size */
+  .paper-header .status-tag {
     display: inline-block;
-    font-size: 14px;
-    color: #8a6d1f;
-    background: #fbf6e9;
-    border: 1px solid #e7d49b;
-    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: bold;
+    color: #1a3a5c;
+    background: #eaf0f6;
+    border: 1px solid #c5d0dc;
+    border-radius: 3px;
+    padding: 0 8px;
+    margin-left: 6px;
+    transition: background 0.15s, color 0.15s;
+  }
+  .paper-header a.status-tag:hover {
+    background: #1a3a5c;
+    color: #fff;
+    border-color: #1a3a5c;
+    text-decoration: none;
+  }
+  .paper-authors {
+    color: #444;
+    font-size: 0.93em;
+    margin-top: 3px;
+  }
+  .paper-authors a { color: #444; }
+  .paper-authors a:hover { color: #1a3a5c; }
+
+
+  /* ── Tab row: status badge, link pills, and abstract toggle all inline ── */
+  .paper-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    margin-top: 22px;
+    margin-bottom: 2px;
+  }
+  .paper-links a,
+  .paper-links .abstract-toggle {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7em;
+    line-height: 1.5;
     padding: 4px 10px;
-    margin-bottom: 14px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    letter-spacing: 0.3px;
+    transition: background 0.15s, color 0.15s;
   }
-  .teaching-item {
-    margin-bottom: 4px;
-    font-size: 15px;
-    line-height: 1.45;
+  /* filled navy = external resource */
+  .paper-links a {
+    background: #1a3a5c;
+    color: #fff;
+    border-color: #1a3a5c;
   }
-  .teaching-item .course { color: #1a1a1a; }
-  .teaching-item .details { color: #1a1a1a; font-size: 14px; }
-  .teaching-item .details .level { color: #1a1a1a; }
-
-  .cv-link { font-size: 15.5px; }
-
-  footer {
-    border-top: 1px solid #eee;
-    padding: 16px 0;
+  .paper-links a:hover {
+    background: #2a5a8c;
+    border-color: #2a5a8c;
+    text-decoration: none;
+  }
+  /* outlined = in-page toggle */
+  .paper-links .abstract-toggle {
+    background: #fff;
+    color: #1a3a5c;
+    border-color: #1a3a5c;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+  }
+  .paper-links .abstract-toggle:hover {
+    background: #1a3a5c;
+    color: #fff;
+  }
+  .abstract-content {
+    display: none;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.65;
     margin-top: 8px;
-    text-align: center;
-    font-size: 13px;
-    color: #aaa;
-    font-family: sans-serif;
+    padding: 10px 14px;
+    background: #f5f7fa;
+    border-left: 3px solid #c5d0dc;
   }
 
+  /* ── Labelled sub-lists: awards, presentations, courses, journals ── */
+  .paper-meta { margin-top: 16px; }
+
+  /* ── Teaching ──
+     Uses the same block grammar as papers: header + department line +
+     bold label with plain lines, so both sections read identically. */
+  .school-dept {
+    color: #444;
+    font-size: 0.93em;
+    margin-top: 3px;
+  }
+
+  /* ── Referee ── */
+  .sub-label {
+    font-weight: bold;
+    font-size: 0.98em;
+    color: #333;
+    margin-top: 18px;
+    margin-bottom: 2px;
+  }
+  .sub-label:first-of-type { margin-top: 0; }
+  .school-dept + .sub-label { margin-top: 14px; }
+  .referee-list,
+  .plain-list {
+    font-size: 0.95em;
+    color: #333;
+    line-height: 1.75;
+    list-style: disc;
+    margin: 3px 0 0 22px;
+  }
+  .referee-list li,
+  .plain-list li { margin-bottom: 2px; }
+  .referee-list a { color: #333; }
+  .referee-list a:hover { color: #1a3a5c; }
+
+  .cv-text { font-size: 0.98em; }
+
+  /* ── Footer ── */
+  footer {
+    background: #f5f7f9;
+    border-top: 1px solid #dde3ea;
+    text-align: center;
+    padding: 18px;
+    font-size: 0.82em;
+    color: #666;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 40px;
+  }
+
+  /* ── Responsive ── */
   @media (max-width: 640px) {
     .header-section {
       flex-direction: column;
       align-items: center;
       text-align: center;
+      gap: 20px;
     }
-    nav .links a { margin-left: 16px; font-size: 13px; }
-    nav .name { font-size: 16px; }
+    nav { padding: 0 16px; }
+    nav ul li a { padding: 12px 9px; font-size: 0.78em; }
+    nav .site-name { font-size: 0.95em; }
   }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <span class="name">Yichen Wang</span>
-    <div class="links">
-      <a href="#research">Research</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#cv">C.V.</a>
-    </div>
-  </div>
-</nav>
+<header>
+  <nav>
+    <span class="site-name">Yichen Wang</span>
+    <ul>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="Yichen_Wang_cv.pdf?v=20260814" target="_blank" rel="noopener">C.V.</a></li>
+    </ul>
+  </nav>
+</header>
 
+<main>
 <div class="container">
 
   <!-- ABOUT -->
   <div class="header-section" id="about">
-    <img src="yichen_portrait.png" alt="Yichen Wang" style="width: 180px; height: 220px; object-fit: cover; border: 1px solid #ddd;">
+    <img src="yichen_portrait.png" alt="Yichen Wang">
     <div class="header-info">
       <h1>Yichen Wang</h1>
       <div class="title">Research Scholar, McDonough School of Business, <strong>Georgetown University</strong></div>
       <div class="contact">
-        <span>&#9993; <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#105;&#99;&#104;&#101;&#110;&#46;&#119;&#97;&#110;&#103;&#64;&#103;&#101;&#111;&#114;&#103;&#101;&#116;&#111;&#119;&#110;&#46;&#101;&#100;&#117;">&#121;&#105;&#99;&#104;&#101;&#110;&#46;&#119;&#97;&#110;&#103;&#64;&#103;&#101;&#111;&#114;&#103;&#101;&#116;&#111;&#119;&#110;&#46;&#101;&#100;&#117;</a></span> 
+        <span>&#9993; <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#105;&#99;&#104;&#101;&#110;&#46;&#119;&#97;&#110;&#103;&#64;&#103;&#101;&#111;&#114;&#103;&#101;&#116;&#111;&#119;&#110;&#46;&#101;&#100;&#117;">&#121;&#105;&#99;&#104;&#101;&#110;&#46;&#119;&#97;&#110;&#103;&#64;&#103;&#101;&#111;&#114;&#103;&#101;&#116;&#111;&#119;&#110;&#46;&#101;&#100;&#117;</a></span>
         <span>&#9993; <a href="mailto:ycwang3.21@saif.sjtu.edu.cn">ycwang3.21@saif.sjtu.edu.cn</a></span>
-        <span><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=10760076" target="_blank">SSRN</a> &nbsp;&middot;&nbsp; <a href="https://orcid.org/0000-0001-9880-6456" target="_blank">ORCID</a> &nbsp;&middot;&nbsp; <a href="https://scholar.google.com/citations?user=hABe5JYAAAAJ&hl=en" target="_blank">Google Scholar</a></span>
+        <span><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=10760076" target="_blank" rel="noopener">SSRN</a> &nbsp;&middot;&nbsp; <a href="https://orcid.org/0000-0001-9880-6456" target="_blank" rel="noopener">ORCID</a> &nbsp;&middot;&nbsp; <a href="https://scholar.google.com/citations?user=hABe5JYAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></span>
       </div>
     </div>
   </div>
 
   <section>
-    <h2>About</h2>
-    <p style="font-size: 15px; color: #1a1a1a; line-height: 1.6; margin-bottom: 8px;">I am a fifth-year Ph.D. Candidate in Finance at Shanghai Jiao Tong University (SAIF, AACSB-accredited) and a research scholar at Georgetown University.</p>
-    <p style="font-size: 15px; color: #1a1a1a; line-height: 1.6;">My research examines how political forces shape financial outcomes, focusing on government credit provision, bank ownership, and household investment decisions.</p>
+    <h2 class="section-heading">About</h2>
+    <p class="about-text">I am a Ph.D. Candidate in Finance (ABD) at Shanghai Jiao Tong University (SAIF, AACSB-accredited) and a research scholar at Georgetown University.</p>
+    <p class="about-text">My research examines how political forces shape financial outcomes, focusing on government credit provision, bank ownership, and household investment decisions.</p>
   </section>
 
   <section>
-    <h2>Research Interests</h2>
+    <h2 class="section-heading">Research Interests</h2>
     <p class="interests">Political Finance &nbsp;&middot;&nbsp; Corporate Finance &nbsp;&middot;&nbsp; Household Finance &nbsp;&middot;&nbsp; Real Estate</p>
   </section>
 
   <!-- PUBLICATIONS -->
   <section id="research">
-    <h2>Publications</h2>
+    <h2 class="section-heading">Publications</h2>
+
     <div class="paper">
-      <div class="paper-title">[1]. Curse of low-skilled emigration on human capital formation: Evidence from the migration surge of the 2000s</div>
-      <div class="authors">with <a href="https://research-repository.uwa.edu.au/en/persons/sam-tang/" target="_blank">Sam Hak Kan Tang</a> and <a href="https://www.cb.cityu.edu.hk/staff/efywang/" target="_blank">Yong Wang</a></div>
-      <div class="paper-links">
-        <a class="abstract-toggle">[Abstract]</a>
-        <a href="https://www.sciencedirect.com/science/article/pii/S0305750X25000142" target="_blank" class="lnk-paper">[Full Paper]</a>
+<div class="paper-header">
+        <span class="paper-num">[1]</span>
+        <span class="paper-title">Curse of low-skilled emigration on human capital formation: Evidence from the migration surge of the 2000s</span>
+        <a class="status-tag" href="https://www.sciencedirect.com/journal/world-development" target="_blank" rel="noopener">World Development, 2025 (ABDC A*)</a>
       </div>
-      <div class="venue"><a href="https://www.sciencedirect.com/journal/world-development" target="_blank"><strong><em>World Development</em></strong></a>, 189, May 2025, 106931<br>(<strong>ABDC A*</strong>; a leading development economics journal)</div>
-      <div class="abstract-text">Low-skilled emigration is generally construed as benign and even beneficial for the migrant-sending countries. However, it can also lead to a disincentive effect on human capital formation in the source countries. Using a panel bilateral migration dataset that captures the surge of low-skill migrants in OECD countries in the 2000s, we study how low-skilled emigration affects human capital formation in the migrant-sending countries. We find that the expected returns to low-skilled emigration reduce long-run human capital formation as measured by the average years of schooling and the human capital index of the migrant-sending countries in the subsequent decade. This negative effect on overall human capital formation is manifested through a substantial reduction in tertiary educational attainment, which is both statistically significant and robust to various sensitivity tests and alternative model specifications. Additionally, there is some evidence of a positive association between the expected returns to low-skilled emigration and secondary educational attainment in the subsequent decade. An important qualification is that only middle- and high-income countries are strongly affected by low-skilled emigration, while low-income countries show little to no disincentive effect.</div>
+      <div class="paper-authors">with <a href="https://research-repository.uwa.edu.au/en/persons/sam-tang/" target="_blank" rel="noopener">Sam Hak Kan Tang</a> and <a href="https://www.cb.cityu.edu.hk/staff/efywang/" target="_blank" rel="noopener">Yong Wang</a></div>
+      <div class="paper-links">
+        <button class="abstract-toggle">+ Abstract</button>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0305750X25000142" target="_blank" rel="noopener">Full Paper</a>
+      </div>
+      <div class="abstract-content">Low-skilled emigration is generally construed as benign and even beneficial for the migrant-sending countries. However, it can also lead to a disincentive effect on human capital formation in the source countries. Using a panel bilateral migration dataset that captures the surge of low-skill migrants in OECD countries in the 2000s, we study how low-skilled emigration affects human capital formation in the migrant-sending countries. We find that the expected returns to low-skilled emigration reduce long-run human capital formation as measured by the average years of schooling and the human capital index of the migrant-sending countries in the subsequent decade. This negative effect on overall human capital formation is manifested through a substantial reduction in tertiary educational attainment, which is both statistically significant and robust to various sensitivity tests and alternative model specifications. Additionally, there is some evidence of a positive association between the expected returns to low-skilled emigration and secondary educational attainment in the subsequent decade. An important qualification is that only middle- and high-income countries are strongly affected by low-skilled emigration, while low-income countries show little to no disincentive effect.</div>
     </div>
   </section>
 
   <!-- WORKING PAPERS -->
   <section>
-    <h2>Working Papers</h2>
+    <h2 class="section-heading">Working Papers</h2>
 
     <div class="paper">
-      <div class="paper-title">[2]. Bank Ownership as a Political Instrument: Evidence from Chinese Local Governments</div>
-      <div class="authors">with <a href="https://sites.google.com/view/naideye/home/" target="_blank">Naide Ye</a></div>
-      <div class="venue">Under review at <strong>Review of Finance</strong></div>
-      <div class="paper-links">
-        <a class="abstract-toggle">[Abstract]</a>
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6980639" target="_blank" class="lnk-ssrn">[SSRN]</a>
+<div class="paper-header">
+        <span class="paper-num">[2]</span>
+        <span class="paper-title">Trade Diversion and Government-Led Credit Provision: Evidence from China&rsquo;s VAT Rebate Loan Program</span>
+        <span class="status-tag">Job Market Paper</span>
       </div>
-      <div class="abstract-text">We study how local governments use equity stakes in banks as a political and fiscal instrument to expand off-budget credit. We develop a novel city-bank-year measure of Chinese local government ownership from banks&rsquo; shareholder registries and link it to transaction-level borrowing by local government financing vehicles (LGFVs). We find that a one-standard-deviation increase in a local government&rsquo;s ownership stake in a bank raises that bank&rsquo;s credit to local government borrowers by 11%. We exploit a regulatory reform that forced private shareholders to unwind bank holdings to support a causal interpretation. This effect is stronger when political competition is intense, officials near the end of their terms, and fiscal constraints are tighter. Greater local-government ownership also makes LGFV investment more responsive to industry performance, yet these projects are more likely to fail, indicating that ownership directs credit to attractive industries at the cost of project quality.</div>
-      <div class="presentations"><strong>&#127908; Presentations:</strong> 2024 CCER Summer Institute, 2025 Dishui Lake International Conference in Finance, 2025 International Conference of China and Development Studies, 2026 China International Conference in Macroeconomics (scheduled), 2026 China Financial Research Conference (scheduled), 2026 Southern Finance Association Annual Meeting (scheduled)</div>
+      <div class="paper-links">
+        <button class="abstract-toggle">+ Abstract</button>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6758840" target="_blank" rel="noopener">SSRN</a>
+        <a href="poster_yichen_wang_compress.pdf" target="_blank" rel="noopener">Poster</a>
+        <a href="https://www.linkedin.com/posts/abferorg_conferencehighlights-postersession-researchhighlights-activity-7481180430717603841-53JG/" target="_blank" rel="noopener">Video</a>
+      </div>
+      <div class="abstract-content">We document how access to a government credit program shapes Chinese exporters&rsquo; adjustment to AD investigations by combining firm-product-destination customs data with hand-collected adoption dates of a VAT rebate loan program in 325 prefecture-level cities. AD investigations chill exports of the targeted product to the initiating destination and induce cross-destination diversion. The loan program, which allows exporters to pledge unfulfilled VAT rebate receivables as collateral for short-term bank loans, enables AD-hit firms to continue serving the targeted market and reduces their diversion to non-hit destinations. We explain these patterns through higher prices in initiating destinations and increased short-term borrowing among firms with higher rebate-delay ratios. Our results suggest that financial access shapes firms&rsquo; product-destination investment decisions, and domestic credit policy can moderate the impact of foreign trade barriers.</div>
+      <div class="paper-meta">
+        <p class="sub-label">Awards</p>
+        <ul class="plain-list">
+          <li>Best Poster Award Finalist, 13th ABFER Annual Conference</li>
+          <li>Travel Grant, 2nd HKU Next-Gen Finance PhD Workshop</li>
+        </ul>
+        <p class="sub-label">Presentations</p>
+        <ul class="plain-list">
+          <li>66th Annual Southern Finance Association Meeting, 2026 (scheduled)</li>
+          <li>13th ABFER Annual Conference, 2026 (Poster Session)</li>
+          <li>Georgetown University, EGSO Seminar, 2026</li>
+        </ul>
+      </div>
     </div>
 
     <div class="paper">
-      <div class="paper-title">[3]. Political Ideology and Durable Spending</div>
-      <div class="authors">with <a href="https://sites.google.com/site/yongqiangchu/" target="_blank">Yongqiang Chu</a>, <a href="http://www.francescodacunto.com/" target="_blank">Francesco D'Acunto</a>, <a href="https://www.janetgaofinance.com/" target="_blank">Janet Gao</a>, and <a href="https://www.congromanwang.com/" target="_blank">Roman Wang</a></div>
-      <div class="paper-links">
-        <a class="abstract-toggle">[Abstract]</a>
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6428183" target="_blank" class="lnk-ssrn">[SSRN]</a>
+<div class="paper-header">
+        <span class="paper-num">[3]</span>
+        <span class="paper-title">Political Ideology and Durable Spending</span>
       </div>
-      <div class="abstract-text">We study political ideology as a driver of heterogeneous durable spending. Research in psychology suggests that conservatives' personality traits lead them to focus on the investment properties of durables, whereas liberals focus on consumption value. Combining U.S. voter registration records with housing transactions, which capture both consumption and investment motives, we show that conservatives transact more frequently, especially in secondary properties, which do not necessarily provide any consumption value. Conditional on transacting, conservatives more often trade down and realize capital gains, while liberals trade up and increase housing consumption. Conservatives' transactions, but not liberals', respond more strongly to financial incentives: interest rates, the opportunity cost of housing investments relative to equities, and house-price appreciation. Within households, ideology does not combine linearly: mixed-ideology couples transact less than ideologically homogeneous ones of either color, and their choices align more closely with the man's ideology.</div>
-      <div class="presentations"><strong>&#128196; Working Paper Series:</strong> HKU Jockey Club Enterprise Sustainability Global Research Institute Paper No. 2026/057</div>
+      <div class="paper-authors">with <a href="https://sites.google.com/site/yongqiangchu/" target="_blank" rel="noopener">Yongqiang Chu</a>, <a href="http://www.francescodacunto.com/" target="_blank" rel="noopener">Francesco D&rsquo;Acunto</a>, <a href="https://www.janetgaofinance.com/" target="_blank" rel="noopener">Janet Gao</a>, and <a href="https://www.congromanwang.com/" target="_blank" rel="noopener">Roman Wang</a></div>
+      <div class="paper-links">
+        <button class="abstract-toggle">+ Abstract</button>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6428183" target="_blank" rel="noopener">SSRN</a>
+      </div>
+      <div class="abstract-content">We study political ideology as a driver of heterogeneous durable spending. Research in psychology suggests that conservatives&rsquo; personality traits lead them to focus on the investment properties of durables, whereas liberals focus on consumption value. Combining U.S. voter registration records with housing transactions, which capture both consumption and investment motives, we show that conservatives transact more frequently, especially in secondary properties, which do not necessarily provide any consumption value. Conditional on transacting, conservatives more often trade down and realize capital gains, while liberals trade up and increase housing consumption. Conservatives&rsquo; transactions, but not liberals&rsquo;, respond more strongly to financial incentives: interest rates, the opportunity cost of housing investments relative to equities, and house-price appreciation. Within households, ideology does not combine linearly: mixed-ideology couples transact less than ideologically homogeneous ones of either color, and their choices align more closely with the man&rsquo;s ideology.</div>
+      <div class="paper-meta">
+        <p class="sub-label">Working Paper Series</p>
+        <ul class="plain-list">
+          <li>HKU Jockey Club Enterprise Sustainability Global Research Institute Paper No. 2026/057</li>
+        </ul>
+        <p class="sub-label">Presentations</p>
+        <ul class="plain-list">
+          <li>Financial Management Association (FMA) Annual Meeting, 2026 (scheduled)</li>
+        </ul>
+      </div>
     </div>
 
     <div class="paper">
-      <div class="paper-title">[4]. Trade Diversion and Government-Led Credit Provision: Evidence from China's VAT Rebate Loan Program</div>
-      <div class="paper-links">
-        <a class="abstract-toggle">[Abstract]</a>
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6758840" target="_blank" class="lnk-ssrn">[SSRN]</a>
-        <a href="poster_yichen_wang_compress.pdf" target="_blank" class="lnk-poster">[Poster]</a>
+<div class="paper-header">
+        <span class="paper-num">[4]</span>
+        <span class="paper-title">Bank Ownership as a Political Instrument: Evidence from Chinese Local Governments</span>
+        <a class="status-tag" href="https://academic.oup.com/rof" target="_blank" rel="noopener">Under Review: Review of Finance (ABDC A*, FT50)</a>
       </div>
-      <div class="abstract-text">We document how access to a government credit program shapes Chinese exporters' adjustment to AD investigations by combining firm-product-destination customs data with hand-collected adoption dates of a VAT rebate loan program in 325 prefecture-level cities. AD investigations chill exports of the targeted product to the initiating destination and induce cross-destination diversion. The loan program, which allows exporters to pledge unfulfilled VAT rebate receivables as collateral for short-term bank loans, enables AD-hit firms to continue serving the targeted market and reduces their diversion to non-hit destinations. We explain these patterns through higher prices in initiating destinations and increased short-term borrowing among firms with higher rebate-delay ratios. Our results suggest that financial access shapes firms' product-destination investment decisions, and domestic credit policy can moderate the impact of foreign trade barriers.</div>
-      <div class="presentations"><strong>&#127942; Award:</strong> Best Poster Award Finalist, 2026 ABFER Annual Conference<br><strong>&#127758; Travel Grant:</strong> 2nd HKU Next-Gen Finance PhD Workshop<br><strong>&#127908; Presentations:</strong> 2026 ABFER Annual Conference, Georgetown University (EGSO Seminar, April 2026), 2026 FMA European Conference Doctoral Student Consortium (canceled), 2026 CCER Summer Institute (scheduled)</div>
+      <div class="paper-authors">with <a href="https://sites.google.com/view/naideye/home/" target="_blank" rel="noopener">Naide Ye</a></div>
+      <div class="paper-links">
+        <button class="abstract-toggle">+ Abstract</button>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6980639" target="_blank" rel="noopener">SSRN</a>
+      </div>
+      <div class="abstract-content">We study how local governments use equity stakes in banks as a political and fiscal instrument to expand off-budget credit. We develop a novel city-bank-year measure of Chinese local government ownership from banks&rsquo; shareholder registries and link it to transaction-level borrowing by local government financing vehicles (LGFVs). We find that a one-standard-deviation increase in a local government&rsquo;s ownership stake in a bank raises that bank&rsquo;s credit to local government borrowers by 11%. We exploit a regulatory reform that forced private shareholders to unwind bank holdings to support a causal interpretation. This effect is stronger when political competition is intense, officials near the end of their terms, and fiscal constraints are tighter. Greater local-government ownership also makes LGFV investment more responsive to industry performance, yet these projects are more likely to fail, indicating that ownership directs credit to attractive industries at the cost of project quality.</div>
+      <div class="paper-meta">
+        <p class="sub-label">Presentations</p>
+        <ul class="plain-list">
+          <li>66th Annual Southern Finance Association Meeting, 2026 (scheduled)</li>
+          <li>China Financial Research Conference, Tsinghua PBC School of Finance, 2026</li>
+          <li>Eighth China International Conference in Macroeconomics, 2026</li>
+          <li>Dishui Lake International Conference in Finance, Shanghai University of Finance and Economics, 2025</li>
+          <li>8th International Conference of China and Development Studies, 2025</li>
+          <li>8th CCER Summer Institute, Peking University, 2024</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHING -->
+  <section id="teaching">
+    <h2 class="section-heading">Teaching</h2>
+
+    <div class="teaching-group">
+      <div class="paper-header">
+        <span class="paper-title">Georgetown University</span>
+      </div>
+      <div class="school-dept">McDonough School of Business</div>
+      <p class="sub-label">Courses</p>
+      <ul class="plain-list">
+        <li>Corporate Valuation &mdash; Undergraduate, Fall 2026</li>
+      </ul>
+    </div>
+
+    <div class="teaching-group">
+      <div class="paper-header">
+        <span class="paper-title">Shanghai Jiao Tong University</span>
+        <span class="status-tag">Taught in English</span>
+      </div>
+      <div class="school-dept">Shanghai Advanced Institute of Finance</div>
+      <p class="sub-label">Courses</p>
+      <ul class="plain-list">
+        <li>Corporate Finance &mdash; MBA, Spring 2025</li>
+        <li>Principles of Finance &mdash; MBA &amp; Master of Finance, Fall 2023, Fall 2024</li>
+        <li>Financial Literacy &mdash; Undergraduate, Spring 2024</li>
+        <li>Real Estate Finance &mdash; MBA, Summer 2023</li>
+        <li>Advanced Business Analytics &mdash; MBA, Spring 2022, Fall 2022</li>
+        <li>Marketing Management &mdash; MBA, Fall 2022</li>
+        <li>Product Pricing Strategy &mdash; MBA, Spring 2022</li>
+        <li>Asset Management in Practice &mdash; MBA, Fall 2021</li>
+      </ul>
+      <p class="sub-label">Award</p>
+      <ul class="plain-list">
+        <li>Teaching Assistant Excellence Award, 2024</li>
+      </ul>
     </div>
   </section>
 
   <!-- REFEREE ACTIVITY -->
   <section id="service">
-    <h2>Referee Activity</h2>
-    <p style="font-size: 15px; margin-bottom: 4px;"><strong>Ad Hoc Referee</strong></p>
-    <p style="font-size: 15px; margin-bottom: 12px; line-height: 1.6;"><em>Pacific-Basin Finance Journal</em> (2023; 2024 &times;2; 2025 &times;5; 2026 &times;2)<br><em>Journal of Banking &amp; Finance</em> (2025; 2026)</p>
-    <p style="font-size: 15px; margin-bottom: 4px;"><strong>Conference Referee</strong></p>
-    <p style="font-size: 15px;">ICGS Conference 2026 (HEC Montr&eacute;al)</p>
-  </section>
+    <h2 class="section-heading">Referee Activity</h2>
 
-  <!-- TEACHING -->
-  <section id="teaching">
-    <h2>Teaching</h2>
-    <p class="teaching-intro">Teaching Assistant, Shanghai Jiao Tong University &nbsp;&middot;&nbsp; all courses taught in English</p>
-    <div class="award-badge">&#127942; Teaching Assistant Excellence Award, 2024</div>
+    <p class="sub-label">Ad Hoc Referee</p>
+    <ul class="referee-list">
+      <li><a href="https://www.sciencedirect.com/journal/journal-of-banking-and-finance" target="_blank" rel="noopener">Journal of Banking &amp; Finance</a> (<strong>ABDC A*</strong>)</li>
+      <li><a href="https://www.sciencedirect.com/journal/pacific-basin-finance-journal" target="_blank" rel="noopener">Pacific-Basin Finance Journal</a> (<strong>ABDC A</strong>)</li>
+    </ul>
 
-    <div class="teaching-item"><span class="course">Principles of Finance</span> <span class="details">&mdash; <span class="level">MBA &amp; Master of Finance</span> &nbsp;&middot;&nbsp; Fall 2023, Fall 2024</span></div>
-    <div class="teaching-item"><span class="course">Corporate Finance</span> <span class="details">&mdash; <span class="level">MBA</span> &nbsp;&middot;&nbsp; Spring 2025</span></div>
-    <div class="teaching-item"><span class="course">Financial Literacy</span> <span class="details">&mdash; <span class="level">Undergraduate</span> &nbsp;&middot;&nbsp; Spring 2024</span></div>
-    <div class="teaching-item"><span class="course">Real Estate Finance</span> <span class="details">&mdash; <span class="level">MBA</span> &nbsp;&middot;&nbsp; Summer 2023</span></div>
-    <div class="teaching-item"><span class="course">Advanced Business Analytics</span> <span class="details">&mdash; <span class="level">MBA</span> &nbsp;&middot;&nbsp; Spring 2022, Fall 2022</span></div>
-    <div class="teaching-item"><span class="course">Product Pricing Strategy</span> <span class="details">&mdash; <span class="level">MBA</span> &nbsp;&middot;&nbsp; Spring 2022</span></div>
-    <div class="teaching-item"><span class="course">Marketing Management</span> <span class="details">&mdash; <span class="level">MBA</span> &nbsp;&middot;&nbsp; Fall 2022</span></div>
-    <div class="teaching-item"><span class="course">Asset Management in Practice</span> <span class="details">&mdash; <span class="level">MBA</span> &nbsp;&middot;&nbsp; Fall 2021</span></div>
+    <p class="sub-label">Conference Referee</p>
+    <ul class="referee-list">
+      <li><a href="https://icgs-2026.hec.ca/" target="_blank" rel="noopener">ICGS Conference 2026</a> (HEC Montr&eacute;al)</li>
+    </ul>
   </section>
 
   <!-- CV -->
   <section id="cv">
-    <h2>C.V.</h2>
-    <p class="cv-link">Please find my CV <a href="Yichen_Wang_cv.pdf?v=20260624" target="_blank">here</a>.</p>
+    <h2 class="section-heading">C.V.</h2>
+    <p class="cv-text">Please find my CV <a href="Yichen_Wang_cv.pdf?v=20260814" target="_blank" rel="noopener">here</a>.</p>
   </section>
 
 </div>
+</main>
 
 <footer>
-  &copy; 2026 Yichen Wang
+  <p>&copy; 2026 Yichen Wang &nbsp;|&nbsp; McDonough School of Business, Georgetown University</p>
 </footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.abstract-toggle').forEach(function(el) {
-    var paper = el.closest('.paper');
-    var abs = paper.querySelector('.abstract-text');
+  document.querySelectorAll('.abstract-toggle').forEach(function(btn) {
+    var abs = btn.closest('.paper').querySelector('.abstract-content');
     abs.style.display = 'none';
-    el.textContent = '[Abstract]';
-    el.addEventListener('click', function(e) {
+    btn.textContent = '+ Abstract';
+    btn.addEventListener('click', function(e) {
       e.preventDefault();
       if (abs.style.display === 'none') {
         abs.style.display = 'block';
-        el.textContent = '[Hide Abstract]';
+        btn.textContent = '− Abstract';
       } else {
         abs.style.display = 'none';
-        el.textContent = '[Abstract]';
+        btn.textContent = '+ Abstract';
       }
     });
   });
